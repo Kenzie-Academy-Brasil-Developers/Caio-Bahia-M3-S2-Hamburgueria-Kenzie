@@ -5,7 +5,7 @@ import { CardProductList } from "./Card-ProductList"
 export const ProducList = ({ search, searchOnList, addToCart, setSearch }) => {
   return (
     <>
-      <SearchResults search={search}></SearchResults>
+      {search !== "" ? <SearchResults search={search}></SearchResults> : false}
       <ul>
         {searchOnList.map((product) => (
           <CardProductList

@@ -4,11 +4,11 @@ export const SearchInput = ({ setSearch }) => {
   const [inputValue, setInputValue] = useState("")
 
   const submit = (event) => {
-    event.preventDefaut()
+    event.preventDefault()
     setSearch(inputValue)
     setSearch("")
   }
-
+  setSearch(inputValue)
   return (
     <>
       <form onSubmit={submit}>
@@ -19,7 +19,6 @@ export const SearchInput = ({ setSearch }) => {
           placeholder="Digite sua pesquisa..."
         />
         <button type="submit">Pesquisar</button>
-        <h3>{inputValue}</h3>
       </form>
     </>
   )
