@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css"
 import { ProducList } from "../../components/ProductList"
 import { Header } from "../../components/Header"
 import { ShopCart } from "../../components/Cart"
+import { DivHtmldad } from "./style"
 
 export const Dashboard = () => {
   const [products, setProducts] = useState([])
@@ -56,7 +57,7 @@ export const Dashboard = () => {
   }
 
   return (
-    <>
+    <DivHtmldad>
       <Header setSearch={setSearch}></Header>
       <main>
         <div>
@@ -84,6 +85,6 @@ export const Dashboard = () => {
         pauseOnHover={false}
         theme="light"
       />
-    </>
+    </DivHtmldad>
   )
 }

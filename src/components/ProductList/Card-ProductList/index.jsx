@@ -1,8 +1,9 @@
 import React from "react"
+import { LiCardProductListStyled } from "./style"
 
 export const CardProductList = ({ product, addToCart, setSearch }) => {
   return (
-    <li>
+    <LiCardProductListStyled>
       <div>
         <img src={product.img} alt={product.name} />
       </div>
@@ -19,6 +20,6 @@ export const CardProductList = ({ product, addToCart, setSearch }) => {
           Adicionar
         </button>
       </div>
-    </li>
+    </LiCardProductListStyled>
   )
 }

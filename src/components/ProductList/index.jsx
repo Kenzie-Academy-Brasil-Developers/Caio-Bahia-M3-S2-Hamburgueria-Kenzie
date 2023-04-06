@@ -1,12 +1,13 @@
 import React from "react"
 import { SearchResults } from "./SearchResults"
 import { CardProductList } from "./Card-ProductList"
+import { UlProductListStyled } from "./style"
 
 export const ProducList = ({ search, searchOnList, addToCart, setSearch }) => {
   return (
     <>
       {search !== "" ? <SearchResults search={search}></SearchResults> : false}
-      <ul>
+      <UlProductListStyled>
         {searchOnList.map((product) => (
           <CardProductList
             key={product.id}
@@ -15,7 +16,7 @@ export const ProducList = ({ search, searchOnList, addToCart, setSearch }) => {
             setSearch={setSearch}
           ></CardProductList>
         ))}
-      </ul>
+      </UlProductListStyled>
     </>
   )
 }
