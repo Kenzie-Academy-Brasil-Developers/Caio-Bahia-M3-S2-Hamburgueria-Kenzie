@@ -1,13 +1,13 @@
 import React from "react"
-import { LiCardProductListStyled } from "./style"
+import { DivImgContainerStyled, DivTextContainer, LiCardProductListStyled } from "./style"
 
 export const CardProductList = ({ product, addToCart, setSearch }) => {
   return (
     <LiCardProductListStyled>
-      <div>
+      <DivImgContainerStyled>
         <img src={product.img} alt={product.name} />
-      </div>
-      <div>
+      </DivImgContainerStyled>
+      <DivTextContainer>
         <h3>{product.name}</h3>
         <small>{product.category}</small>
         <p>R${product.price}</p>
@@ -19,7 +19,7 @@ export const CardProductList = ({ product, addToCart, setSearch }) => {
         >
           Adicionar
         </button>
-      </div>
+      </DivTextContainer>
     </LiCardProductListStyled>
   )
 }

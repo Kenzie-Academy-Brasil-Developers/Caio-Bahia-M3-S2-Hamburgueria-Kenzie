@@ -8,5 +8,10 @@ export const DivHtmldad = styled.div`
     display: flex;
     flex-direction: column;
     margin: 16px;
+    aside {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
   }
 `

@@ -1,20 +1,27 @@
 import React from "react"
+import {
+  DivCartRightSideStyled,
+  DivCartleftSideStyled,
+  DivImgCartContainer,
+  DivTxtCartContainer,
+  LiCartCard
+} from "./style"
 
 export const CardShopCart = ({ product, removeFromCart }) => {
   return (
-    <li>
-      <div>
-        <div>
+    <LiCartCard>
+      <DivCartleftSideStyled>
+        <DivImgCartContainer>
           <img src={product.img} alt={product.name} />
-        </div>
-        <div>
+        </DivImgCartContainer>
+        <DivTxtCartContainer>
           <h3>{product.name}</h3>
           <small>{product.category}</small>
-        </div>
-      </div>
-      <div>
+        </DivTxtCartContainer>
+      </DivCartleftSideStyled>
+      <DivCartRightSideStyled>
         <p onClick={() => removeFromCart(product.id)}>Remover</p>
-      </div>
-    </li>
+      </DivCartRightSideStyled>
+    </LiCartCard>
   )
 }

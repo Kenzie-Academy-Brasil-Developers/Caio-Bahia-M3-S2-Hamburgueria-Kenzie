@@ -15,4 +15,10 @@ export const HeaderStyled = styled.header`
     width: 158.94px;
     height: 36.83px;
   }
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 14px;
+  }
 `

@@ -2,14 +2,15 @@ import React from "react"
 import { EmptyCart } from "./EmptyCart"
 import { CardShopCart } from "./Card-ShopCart"
 import { TotalValue } from "./TotalValue"
+import { DivCartContainer, DivCartDisplay, DivCartTitleContainer } from "./style"
 
 export const ShopCart = ({ cart, removeFromCart, setCart }) => {
   return (
-    <div>
-      <div>
+    <DivCartContainer>
+      <DivCartTitleContainer>
         <h2>Carrinho de compras</h2>
-      </div>
-      <div>
+      </DivCartTitleContainer>
+      <DivCartDisplay>
         {cart.length === 0 ? (
           <EmptyCart></EmptyCart>
         ) : (
@@ -24,7 +25,7 @@ export const ShopCart = ({ cart, removeFromCart, setCart }) => {
             <TotalValue cart={cart} setCart={setCart}></TotalValue>
           </ul>
         )}
-      </div>
-    </div>
+      </DivCartDisplay>
+    </DivCartContainer>
   )
 }

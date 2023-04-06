@@ -5,4 +5,5 @@ export const UlProductListStyled = styled.ul`
   flex-direction: row;
   overflow-y: auto;
   gap: 20px;
+  margin-bottom: 20px;
 `

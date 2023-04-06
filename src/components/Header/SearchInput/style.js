@@ -28,6 +28,10 @@ export const FormSearchStyled = styled.form`
       color: #e0e0e0;
     }
   }
+  @media (min-width: 600px) {
+    width: 60%;
+    max-width: 365px;
+  }
 `
 export const ButtonSubmitStyled = styled.button`
   display: flex;
