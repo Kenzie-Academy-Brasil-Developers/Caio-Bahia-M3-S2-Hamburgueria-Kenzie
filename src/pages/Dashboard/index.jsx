@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css"
 import { ProducList } from "../../components/ProductList"
 import { Header } from "../../components/Header"
 import { ShopCart } from "../../components/Cart"
-import { DivHtmldad } from "./style"
+import { DivHtmldad, DivMainContainerAux } from "./style"
 
 export const Dashboard = () => {
   const [products, setProducts] = useState([])
@@ -59,32 +59,34 @@ export const Dashboard = () => {
   return (
     <DivHtmldad>
       <Header setSearch={setSearch}></Header>
-      <main>
-        <div>
-          <ProducList
-            searchOnList={searchOnList}
-            addToCart={addToCart}
-            setSearch={setSearch}
-            search={search}
-          ></ProducList>
-        </div>
-        <aside>
-          <ShopCart cart={cart} setCart={setCart} removeFromCart={removeFromCart}></ShopCart>
-        </aside>
-      </main>
+      <DivMainContainerAux>
+        <main>
+          <div>
+            <ProducList
+              searchOnList={searchOnList}
+              addToCart={addToCart}
+              setSearch={setSearch}
+              search={search}
+            ></ProducList>
+          </div>
+          <aside>
+            <ShopCart cart={cart} setCart={setCart} removeFromCart={removeFromCart}></ShopCart>
+          </aside>
+        </main>
 
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover={false}
-        theme="light"
-      />
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover={false}
+          theme="light"
+        />
+      </DivMainContainerAux>
     </DivHtmldad>
   )
 }

@@ -6,19 +6,8 @@ export const DivCartContainer = styled.div`
   flex-direction: column;
   background-color: var(--gray-0);
   border-radius: 5px;
-
-  /* @media (min-width: 425px) {
-    max-width: 450px;
-    flex-shrink: 0;
-  }
-
-  @media (min-width: 768px) {
-    max-width: 450px;
-    min-height: 250px;
-  }
-  @media (min-width: 950px) {
-    justify-content: center;
-  } */
+  width: 365px;
+  height: fit-content;
 `
 export const DivCartTitleContainer = styled.div`
   background: #27ae60;

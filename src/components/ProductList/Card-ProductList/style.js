@@ -10,6 +10,10 @@ export const LiCardProductListStyled = styled.li`
   border-radius: 5px;
   flex-shrink: 0;
 
+  @media (min-width: 950px) {
+    width: 260px;
+  }
+
   img {
     width: 177px;
     height: 177px;

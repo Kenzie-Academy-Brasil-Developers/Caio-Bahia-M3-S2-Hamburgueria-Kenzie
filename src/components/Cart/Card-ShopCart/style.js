@@ -18,6 +18,9 @@ export const DivCartRightSideStyled = styled.div`
     font-size: 12px;
     line-height: 15px;
     color: #bdbdbd;
+    :hover {
+      color: red;
+    }
   }
 `
 export const DivImgCartContainer = styled.div`
